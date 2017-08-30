@@ -7,6 +7,7 @@
 namespace app\controllers;
 
 use app\models\UserModel;
+use component\Request;
 
 class IndexController extends Controller
 {
@@ -16,8 +17,10 @@ class IndexController extends Controller
 //    }
 
     public function indexAction(){
+        $name = Request::getParams('name');
+        echo $name;exit;
         $model = new UserModel();
         echo $model->test();
     }
-    
+
 }
