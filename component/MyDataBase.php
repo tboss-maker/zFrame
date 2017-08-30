@@ -37,4 +37,6 @@ class MyDataBase
     public function query($sql){
         return $this->mysql->query($sql)->fetchAll(2);
     }
+
+    private function __clone(){}
 }

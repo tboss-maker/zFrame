@@ -12,8 +12,11 @@ use component\MyDataBase;
 class Model
 {
     protected $mysql;
+    protected $tableName;
     public function __construct()
     {
         $this->mysql = MyDatabase::getInstance();
     }
+
+
 }

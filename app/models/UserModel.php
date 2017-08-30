@@ -8,9 +8,11 @@ namespace app\models;
 
 class UserModel extends Model
 {
+    protected $tableName = 'user';
     public function test()
     {
-        $data = $this->mysql->query('select * from USER ');
+        $sql = 'select * from USER';
+        $data = $this->mysql->query($sql);
         var_dump($data);
     }
 }

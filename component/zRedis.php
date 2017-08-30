@@ -42,4 +42,6 @@ class zRedis
         }
         return $this->zRedis->get($name);
     }
+
+    private function __clone(){}
 }
