@@ -7,5 +7,5 @@
 header("Content-type: text/html; charset=utf-8");
 require_once './core/core.php';
 require_once './core/register.php';
-
+//urlManage::make();
 Core::run();

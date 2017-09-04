@@ -7,8 +7,8 @@
 //redis组件
 class zRedis
 {
-    private static $instance;
-    private $zRedis;
+    protected static $instance = null;
+    protected $zRedis = null;
 
     public static function getInstance()
     {
@@ -21,10 +21,12 @@ class zRedis
     public function __construct()
     {
         if (!$this->zRedis) {
-            $config = register::_get('config')['redis'];
+//            $config = register::_get('config')['redis'];
             $this->zRedis = new Redis();
-            $this->zRedis->pconnect($config['host'], $config['port']);
+//            $this->zRedis->pconnect($config['host'], $config['port']);
+            $this->zRedis->pconnect('127.0.0.1', '3306');
         }
+        return $this->zRedis;
     }
 
     public function set($name, $value)
@@ -37,11 +39,19 @@ class zRedis
 
     public function get($name)
     {
-        if(empty($name)){
+        if (empty($name)) {
             return false;
         }
         return $this->zRedis->get($name);
     }
 
-    private function __clone(){}
+    public function flashAll()
+    {
+        $ret = $this->zRedis->flushAll();
+        return $ret;
+    }
+
+    private function __clone()
+    {
+    }
 }

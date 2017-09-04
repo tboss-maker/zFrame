@@ -8,9 +8,12 @@
 namespace component;
 class Request
 {
-    public static function getParams($name)
+    public static function getParams($name='')
     {
-        return isset($_GET['name']) ? $_GET[$name] : '';
+        if(!isset($name)){
+            return $_GET;
+        }
+        return $_GET[$name];
     }
 
     public static function postParams($name)

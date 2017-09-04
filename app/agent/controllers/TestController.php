@@ -4,7 +4,7 @@
  * Email: zhaosuji@foxmail.com
  * Date: 2017/8/29 14:05
  */
-namespace app\controllers;
+namespace app\agent\controllers;
 
 class TestController extends Controller
 {

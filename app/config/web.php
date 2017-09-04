@@ -9,7 +9,10 @@ $redis = require_once CONFIG . DS . 'redis.php';
 
 $config = [
     'mysql' => $db,
-    'redis' => $redis
+    'redis' => $redis,
+    'modules' => 'agent,truck,user',
+    //默认路由
+    'defaultRoute' => 'agent/Index/index'
 ];
 
 return $config;

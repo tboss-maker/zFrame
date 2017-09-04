@@ -4,7 +4,7 @@
  * Email: zhaosuji@foxmail.com
  * Date: 2017/8/29 13:58
  */
-namespace app\models;
+namespace app\agent\models;
 
 class UserModel extends Model
 {

@@ -4,7 +4,7 @@
  * Email: zhaosuji@foxmail.com
  * Date: 2017/8/30 16:56
  */
-namespace app\models;
+namespace app\agent\models;
 
 
 use component\MyDataBase;

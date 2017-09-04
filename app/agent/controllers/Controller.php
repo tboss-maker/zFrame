@@ -4,7 +4,7 @@
  * Email: zhaosuji@foxmail.com
  * Date: 2017/8/29 14:09
  */
-namespace app\controllers;
+namespace app\agent\controllers;
 
 class Controller{
     public function __construct()
@@ -17,12 +17,12 @@ class Controller{
 
     public function __call($name, $arguments)
     {
-        die('该方法飞回火星去了...');
+        die(REQUEST_ERROR);
     }
 
     public static function __callStatic($name, $arguments)
     {
-        die('该方法飞回火星去了...');
+        die(REQUEST_ERROR);
     }
 
     public function __destruct()

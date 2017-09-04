@@ -8,6 +8,6 @@
 class writeLog
 {
     public function write(){
-
+        
     }
 }

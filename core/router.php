@@ -6,9 +6,10 @@
  */
 class router{
     public static function route(){
-        $controller = "app\\controllers\\" . CON.'Controller';;
+//        $controller = "app\\controllers\\" . CON.'Controller';;
+        $controller = CON;
         $controller = new $controller;
-        $act = ACT.'Action';
+        $act = ACT;
         $controller->$act();
     }
 }
