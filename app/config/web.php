@@ -6,13 +6,18 @@
  */
 $db = require_once CONFIG . DS . 'db.php';
 $redis = require_once CONFIG . DS . 'redis.php';
-
+$params = require_once CONFIG. DS. 'params.php';
 $config = [
     'mysql' => $db,
     'redis' => $redis,
-    'modules' => 'agent,truck,user',
+    //设置模块
+    'modules' => 'weixin,test',
     //默认路由
-    'defaultRoute' => 'agent/Index/index'
+    'defaultRoute' => 'weixin/Menu/create',
+    //微信设置
+    'appid' => '',
+    'appsecret' => '',
+    'token' => ''
 ];
 
 return $config;

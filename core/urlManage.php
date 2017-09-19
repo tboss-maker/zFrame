@@ -10,7 +10,7 @@ class urlManage
 {
     //模块
     public static function make(){
-        $baseUrl = $_REQUEST['_url'];
+        $baseUrl = empty($_REQUEST['_url']) ? $_REQUEST['_url'] : '';
         $config = register::_get('config');
         if(!isset($baseUrl)){
             $baseUrl = $config['defaultRoute'];
@@ -35,7 +35,7 @@ class urlManage
                     break;
                 default:
                     $controllerName = ucfirst($urlArr[1]).'Controller';
-                    $actionName = $urlArr[2].'Action';
+                    $actionName = lcfirst($urlArr[2]).'Action';
                     break;
             }
 

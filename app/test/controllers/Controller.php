@@ -13,6 +13,13 @@ class Controller{
         if(method_exists($this,'before')){
             static::before();
         }
+
+        //解析behaviors
+//        $behaviors = $this->behaviors();
+    }
+
+    public function behaviors(){
+        return 1;
     }
 
     public function __call($name, $arguments)

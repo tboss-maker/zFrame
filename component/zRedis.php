@@ -4,6 +4,8 @@
  * Email: zhaosuji@foxmail.com
  * Date: 2017/8/30 16:07
  */
+namespace component;
+
 //redis组件
 class zRedis
 {

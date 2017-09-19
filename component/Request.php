@@ -10,7 +10,7 @@ class Request
 {
     public static function getParams($name='')
     {
-        if(!isset($name)){
+        if (!isset($name)) {
             return $_GET;
         }
         return $_GET[$name];
