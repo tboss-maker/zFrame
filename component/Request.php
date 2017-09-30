@@ -16,8 +16,8 @@ class Request
         return $_GET[$name];
     }
 
-    public static function postParams($name)
+    public static function postParams($name,$default='')
     {
-        return isset($_POST[$name]) ? $_POST[$name] : '';
+        return isset($_POST[$name]) ? $_POST[$name] : $default;
     }
 }

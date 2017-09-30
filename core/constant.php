@@ -4,8 +4,6 @@
  * Email: zhaosuji@foxmail.com
  * Date: 2017/8/29 12:41
  */
-//设置框架模式
-defined('MODE') or define('MODE', 'dev');
 
 define('ROOT', realpath('./'));
 define('APP', ROOT . DS . 'app');

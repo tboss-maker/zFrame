@@ -34,7 +34,7 @@ class Log
         }
         $time = ' [ ' . date('Y-m-d H:i:s',time()). ' ] ';
         $res = $time.' [ '.ucfirst($type) . ' ] '.' [ '.$data.' ] '.' [ '.json_encode($_REQUEST).' ] ';
-        file_put_contents($fileName,$res);
+        file_put_contents($fileName,$res,FILE_APPEND);
         return true;
     }
 }

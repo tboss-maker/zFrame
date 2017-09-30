@@ -13,10 +13,8 @@
 //$a = "http:\/\/pay.cardinfo.com.cn\/middlepaytrx\/wx\/authRedirect\/ZHONGXIN\/ZX20170911172708330dk1s";
 //echo urldecode($a);
 
-$a = [1,2];
-$b = [1,2,3];
-//if(in_array($a,$b)){
-//    echo 333;
-//}
-//print_r(array_diff($a,$b));
-print_r(array_diff($b,$a));
+$redis = new Redis();
+$redis->pconnect('192.168.15.248','6381');
+$redis->auth('78dk.com');
+$redis->select(1);
+$redis->flushDB();

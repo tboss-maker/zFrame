@@ -8,11 +8,16 @@
 namespace app\weixin\controllers;
 
 use component\BaseController;
+use component\Request;
+use component\weixin;
 
 class MenuController extends BaseController
 {
+    
     //创建菜单
     public function createAction(){
-        
+        $weixin = new Weixin();
+        $data = Request::postParams('data','');
+        $weixin->createMenu($data);
     }
 }

@@ -10,9 +10,9 @@ class urlManage
 {
     //模块
     public static function make(){
-        $baseUrl = empty($_REQUEST['_url']) ? $_REQUEST['_url'] : '';
+        $baseUrl = isset($_REQUEST['_url']) ? $_REQUEST['_url'] : '';
         $config = register::_get('config');
-        if(!isset($baseUrl)){
+        if(empty($baseUrl)){
             $baseUrl = $config['defaultRoute'];
         }
             $urlStr = explode('?',$baseUrl);

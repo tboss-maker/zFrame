@@ -11,10 +11,13 @@ use register;
 class weixin
 {
     private $access_token;
+    const CREATEMENU = 'https://api.weixin.qq.com/cgi-bin/menu/create?access_token=';
+    const DELETEMENU = 'https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=';
+
     public function __construct()
     {
         $this->appid = register::_get('config')['appid'];
-        $this->appsecret = register::_get('config')['secrete'];
+        $this->appsecret = register::_get('config')['appsecret'];
         $this->getToken();
     }
 
@@ -31,8 +34,12 @@ class weixin
     }
 
     public function createMenu($data){
-        $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=$this->access_token";
-
+        $res = $this->https_request(self::CREATEMENU,$data);
+        if(!empty($res['errcode'])){
+            Log::write('e',json_encode($res));
+            die("创建菜单失败获取失败...");
+        }
+        return true;
     }
 
     private function https_request($url, $data = '')
