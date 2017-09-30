@@ -52,4 +52,19 @@ class Common {
         curl_close($curl);
         return $data;
     }
+
+    public static function _outError($code){
+        if(empty($code)){
+            return false;
+        }
+        $data = array(
+            'code' => $code,
+            'msg' =>  GetErrMsg::getErrMsg($code)
+        );
+        return json_encode($data);
+    }
+
+    public static function _outSuccess(){
+
+    }
 }
