@@ -67,4 +67,16 @@ class Common {
     public static function _outSuccess(){
 
     }
+
+    public static function getRandStr($len=4){
+        $str = 'qwertyuiopasdfghjklzxcvbnm1234567890';
+        if($len<1){
+            $len = 4;
+        }
+        $res = '';
+        for($i=0;$i<$len;$i++){
+            $res .= $str{mt_rand(0,strlen($str)-1)};
+        }
+        return $res;
+    }
 }

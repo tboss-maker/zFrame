@@ -34,16 +34,13 @@ class IndexController extends BaseController
 //        print_r($res);
 
 
-        $data['openid'] = 'oO-mG0W7isAZ2V1ph6eK2g-Lxkuc';
-        $data['type'] = 8;
-        $data['user_name'] = "tom";
-        $data['order_name'] = "111";
-        $data['create_time'] = "222";
-        $url = "http://dev.wx.78dk.com/v4/templates";
-        $res = Common::http_request($url,$data);
-        print_r($res);
-    }
-    public function payAction(){
-        echo 'test'."";
+//        $data['openid'] = 'oO-mG0W7isAZ2V1ph6eK2g-Lxkuc';
+//        $data['type'] = 8;
+//        $data['user_name'] = "tom";
+//        $data['order_name'] = "111";
+//        $data['create_time'] = "222";
+//        $url = "http://dev.wx.78dk.com/v4/templates";
+//        $res = Common::http_request($url,$data);
+//        print_r($res);
     }
 }
